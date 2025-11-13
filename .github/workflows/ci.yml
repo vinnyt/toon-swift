@@ -7,13 +7,9 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
-    name: Test on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [macos-14, macos-15, macos-13]
+  test-macos:
+    name: Test on macOS
+    runs-on: macos-15
 
     steps:
     - name: Checkout code
